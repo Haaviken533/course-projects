@@ -4,7 +4,7 @@ import numpy as np
 def differentiate(u: np.ndarray, dt: float) -> np.ndarray:
     du = np.zeros(len(u))
     for i in range (len(u)):
-        if i < 9:
+        if i < (len(u) - 1):
             du[i] = (u[i+1] - u[i]) / dt
         else:
             du[i] = (u[i] - u[i-1]) / dt
